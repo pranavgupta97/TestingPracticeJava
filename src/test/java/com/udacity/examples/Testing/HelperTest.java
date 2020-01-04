@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.IntSummaryStatistics;
 import java.util.List;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 public class HelperTest {
@@ -27,5 +28,13 @@ public class HelperTest {
         assertEquals(19, statistics.getMax());
 
         assertEquals(yrsOfExperience, actualYearsOfExperience);
+    }
+
+    @Test
+    public void testCompareArrays() {
+        int[] arrayOneBruh = {1, 2, 3};
+        int[] arrayTwoBruh = {1, 2, 3};
+
+        assertArrayEquals(arrayOneBruh, arrayTwoBruh);
     }
 }
