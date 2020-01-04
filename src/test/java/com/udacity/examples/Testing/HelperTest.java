@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
 public class HelperTest {
 
     @Test
-    public void testOne() {
+    public void testGetCount() {
         List<String> employeeNames = Arrays.asList("Pranav", "Bruh");
         long actualCountBruh = Helper.getCount(employeeNames);
         assertEquals(2, actualCountBruh);
