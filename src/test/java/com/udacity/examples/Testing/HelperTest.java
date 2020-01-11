@@ -58,4 +58,17 @@ public class HelperTest {
         assertNotNull(squaredListToTestBruh);
         assertEquals(squaredYearsOfExperienceBruh, squaredListToTestBruh);
     }
+
+    @Test
+    public void testGetMergedList() {
+
+        String mergedListBruh = "sareeta, PranavBruh";
+        List<String>employeeNames = Arrays.asList("sareeta", "", "", "PranavBruh", "", "", "", "", "", "");
+
+        String mergedStringListToTestBruh = Helper.getMergedList(employeeNames);
+
+        assertNotNull(mergedStringListToTestBruh);
+        assertEquals(mergedListBruh, mergedStringListToTestBruh);
+
+    }
 }
