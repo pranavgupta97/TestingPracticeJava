@@ -6,6 +6,7 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.IntSummaryStatistics;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.junit.Assert.*;
 
@@ -44,5 +45,17 @@ public class HelperTest {
         long stringCountBruh = Helper.getStringsOfLength3(employeeNames);
 
         assertEquals(2, stringCountBruh);
+    }
+
+    @Test
+    public void testGetSquareList() {
+
+        List<Integer> yrsOfExperience = Arrays.asList(13,4,15,6,17,8,19,1,2,3);
+        List<Integer> squaredYearsOfExperienceBruh = yrsOfExperience.stream().map(bruh -> bruh = (int) Math.pow(bruh, 2)).collect(Collectors.toList());
+
+        List<Integer> squaredListToTestBruh = Helper.getSquareList(yrsOfExperience);
+
+        assertNotNull(squaredListToTestBruh);
+        assertEquals(squaredYearsOfExperienceBruh, squaredListToTestBruh);
     }
 }
