@@ -7,8 +7,7 @@ import java.util.Arrays;
 import java.util.IntSummaryStatistics;
 import java.util.List;
 
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class HelperTest {
 
@@ -36,5 +35,14 @@ public class HelperTest {
         int[] arrayTwoBruh = {1, 2, 3};
 
         assertArrayEquals(arrayOneBruh, arrayTwoBruh);
+    }
+
+    @Test
+    public void testGetStringsOfLength3() {
+        List<String> employeeNames = Arrays.asList("Oranav", "Bruh", "Bru", "Bro");
+
+        long stringCountBruh = Helper.getStringsOfLength3(employeeNames);
+
+        assertEquals(2, stringCountBruh);
     }
 }
