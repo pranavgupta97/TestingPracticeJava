@@ -71,4 +71,17 @@ public class HelperTest {
         assertEquals(mergedListBruh, mergedStringListToTestBruh);
 
     }
+
+    @Test
+    public void testGetFilteredList() {
+        List<String> employeeNames = Arrays.asList("sareeta", "", "", "PranavBruhDude", "", "", "", "", "", "");
+
+        List<String> realFilteredListBruh = Arrays.asList("sareeta", "PranavBruhDude");
+
+        List<String> realFilteredListBruhToTest = Helper.getFilteredList(employeeNames);
+
+        assertNotNull(realFilteredListBruhToTest);
+
+        assertEquals(realFilteredListBruh, realFilteredListBruhToTest);
+    }
 }
